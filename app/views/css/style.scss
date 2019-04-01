@@ -1,11 +1,12 @@
 // colors
-$bcolor: red;
-
+$bcolor: rgb(247, 135, 8);
+$white: white;
 
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 
     outline: none;
     &:focus{
@@ -34,50 +35,72 @@ body {
     transform: translateX(-50%);
 }
 
-h3.title {
+.ecc{
+    label{
+        border: 1px solid $bcolor;
+
+        color: black;
+        font-size: 17px;
+        font-family: 'Open Sans', sans-serif;
+        padding: 10px 15px;
+        background-color: white;
+    }
+    h3.title {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 40px;
+    }
+
+    form {
+        height: 40px;
+        display: flex;
+        margin-bottom: 15px;
+
+    }
+
+    input, select {
+        border: 1px solid $bcolor;
+    }
+    input:focus, select:focus {
+        outline: none;
+        outline-offset: 0;
+    }
+
+    #amount {
+        max-width: 25%;
+        padding: 0 0 0 15px;
+    }
+
+    form select {
+        flex: 1;
+        padding-left: 8px;
+    }
+
+    form input[type="submit"] {
+        flex: 1;
+        background-color: $bcolor;
+        color: $white;
+    }
+
+    /* Result */
+
+    .results {
+        margin-top: 18px;
+        height: 40px;
+        display: flex;
+    }
+
+    #result{
+        h4{
+            margin-bottom: 15px;
+            text-align: center;
+            color: $white;
+        }
+    }
 }
 
-form {
-    height: 40px;
-    display: flex;
-}
 
-input, select {
-    border: 1px solid $bcolor;
-}
-input:focus, select:focus {
-    outline: none;
-    outline-offset: 0;
-}
-
-#amount {
-    max-width: 25%;
-    padding: 0 0 0 15px;
-}
-
-form select {
-    flex: 1;
-    padding-left: 8px;
-}
-
-form input[type="submit"] {
-    flex: 1;
-    background-color: $bcolor;
-    color: white;
-}
-
-/* Result */
-
-.results {
-    margin-top: 18px;
-    height: 40px;
-    display: flex;
-}
 
 
